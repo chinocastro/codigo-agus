@@ -1,0 +1,249 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(222, 222, 157);
+}
+
+/*Estilos generales*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(255, 43, 43);
+    background-image: linear-gradient(to bottom, red, yellow);
+    text-decoration: solid;
+}
+
+header h1 {
+    text-decoration: solid;
+    text-align: center;
+    margin: 20px;
+    color : white
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    text-align: right; 
+    padding: 30px;
+    background-image: linear-gradient(to bottom, red, yellow);
+} 
+
+nav ul li a {
+    color : white;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 20px;
+}
+
+/*Estilos de productos*/
+
+.productosmaxialuminios {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto ;
+    grid-template-areas: 
+    "h2 h2"
+    "img p"
+    "h2-dos h2-dos"
+    "p-dos img-dos"
+    "h2-tres h2-tres"
+    "img-tres p-tres";
+    justify-items: center;
+}
+
+.productosmaxialuminios h2 {
+    grid-area: h2;
+    font-size: 30px;
+    padding: 40px;
+}
+
+.productosmaxialuminios .h2-dos {
+    grid-area: h2-dos;
+    padding: 40px;
+}
+
+.productosmaxialuminios .h2-tres {
+    grid-area: h2-tres;
+}
+
+.productosmaxialuminios img {
+    grid-area: img;
+    width: 35%;
+}
+
+.productosmaxialuminios p{
+    grid-area: p;
+    align-self: center;
+    font-size: 20px;
+}
+
+.productosmaxialuminios .p-dos {
+    grid-area: p-dos;
+}
+
+.productosmaxialuminios .img-dos {
+    grid-area: img-dos;
+}
+
+.productosmaxialuminios .img-tres {
+    grid-area: img-tres;
+}
+
+.productosmaxialuminios .p-tres {
+    grid-area: p-tres;
+}
+
+.imgventana {
+    transform: rotate(10deg);
+}
+
+.img-dos {
+    transform: rotate(10deg);
+}
+
+.img-tres {
+    transform: rotate(10deg);
+}
+
+/*Estilos de Sucursales*/
+
+.title-h2-fabrica {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.title-h2-sucursal {
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Estilos de Sobre nosotros*/
+
+.listado {
+    margin: 20px;
+    font-size: 23px;
+}
+.h2-nuestra-mision {
+    margin-top: 60px;
+    font-size: 28px;
+}
+
+.p-nuestra-mision {
+    font-size: 23px;
+}
+
+.h2-nuestra-vision {
+    font-size: 28px;
+    margin-top: 50px;
+}
+
+.p-nuestra-vision {
+    font-size: 23px;
+}
+
+.h2-nuestros-valores {
+    font-size: 28px;
+    margin-top: 50px;
+}
+
+.p-nuestros-valores {
+    font-size: 23px;
+}
+
+/*Estilos de Sobre nosotros*/
+
+legend {
+    text-decoration: solid;
+    color: black;
+    font-size: 30px;
+}
+
+label {
+    font-size: 22px;
+}
+
+/*Estilos de Index*/
+
+.main-home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.2fr 1fr;
+    justify-items: center;
+}
+
+.main-home p {
+    margin: 30px;
+    text-align:center;
+    font-size: 25px;
+}
+
+.main-home h2 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.nuestrafabricalink {
+    text-align: center;
+    padding: 30px;
+}
+
+.nuestrasucursallink {
+    text-align: center;
+    padding: 30px;
+}
+
+/*Estilos de Footer*/
+footer h3 {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 40px;
+}
+
+footer {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+}
+
+.facebook- {
+    margin-top: 50px;
+}
+
+/*Visualizacion distintos dispositivos*/
+
+@media screen and (max-width: 480px) {
+    .productosmaxialuminios {
+        grid-template-columns: auto ;
+        grid-template-rows: repeat(9, 1fr) ;
+        grid-template-areas: 
+        "h2"
+        "img"
+        "p"
+        "h2-dos"
+        "p-dos"
+        "img-dos"
+        "h2-tres"
+        "img-tres"
+        "p-tres"
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: right; 
+        padding: 30px;
+        background-color:rgb(255, 43, 43);
+    } 
+    header {
+background-color: gray;
+    }
+    nav ul {
+        background-color: gray;
+    }
+}
